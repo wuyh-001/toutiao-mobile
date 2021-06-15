@@ -9,6 +9,7 @@
         type="info"
         round
         size="small"
+        to="/search"
         >搜索</van-button
       >
     </van-nav-bar>
@@ -81,7 +82,7 @@ export default {
       let channels = [];
       if (this.user) {
         const res = await getUserChannels();
-        channels = res.data.data.channels;
+        channels = res.data.data.channels ;
       } else {
         let userChannel = getItem("user-channels");
         if (userChannel) {

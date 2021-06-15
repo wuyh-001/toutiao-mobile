@@ -14,8 +14,8 @@
       >
         <article-item 
         :article="item"
-        v-for="item in list" 
-        :key="item.art_id"
+        v-for="(item,index) in list" 
+        :key="index"
         />
       </van-list>
     </van-pull-refresh>
